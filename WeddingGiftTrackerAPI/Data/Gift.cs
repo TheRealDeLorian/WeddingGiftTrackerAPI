@@ -15,5 +15,5 @@ public partial class Gift
 
     public virtual ICollection<GiftGuest> GiftGuests { get; set; } = new List<GiftGuest>();
 
-    public virtual Gifttype? GifttypeNavigation { get; set; }
+    public virtual GiftType? GifttypeNavigation { get; set; }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace WeddingGiftTrackerAPI.Data;
 
-public partial class Gifttype
+public partial class GiftType
 {
     public int Id { get; set; }
 
