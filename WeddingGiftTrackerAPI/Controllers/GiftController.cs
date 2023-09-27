@@ -1,18 +1,18 @@
 ﻿
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
-using WeddingGiftTrackerAPI.Data;
+using WeddingGiftTrackerAPI.Data.DataStores;
 
 namespace WeddingGiftTrackerAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeddingGiftController : ControllerBase
+    public class GiftGuestController : ControllerBase
     {
-        private readonly ILogger<WeddingGiftController>
+        private readonly ILogger<GiftGuestController>
         private readonly IDataStore dataStore;
 
-        public WeddingGiftController(ILogger<WeddingGiftController> logger, IDataStore dataStore)
+        public GiftGuestController(ILogger<GiftGuestController> logger, IDataStore dataStore)
         {
         }
     }
