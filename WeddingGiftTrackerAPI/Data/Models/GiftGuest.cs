@@ -7,9 +7,9 @@ public partial class GiftGuest
 {
     public int Id { get; set; }
 
-    public int? Giftid { get; set; }
+    public int? GiftId { get; set; }
 
-    public int? Guestid { get; set; }
+    public int? GuestId { get; set; }
 
     public virtual Gift? Gift { get; set; }
 

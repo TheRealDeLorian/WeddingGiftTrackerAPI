@@ -13,9 +13,12 @@ namespace WeddingGiftTrackerAPI.Controllers
 
         public GiftController(ILogger<GiftGuestController> logger, IDataStore dataStore)
         {
+            _logger = logger;
         }
 
-        [HttpGet]
+      
+
+            [HttpGet]
         public async Task<string> Get()
         {
             return await Task.Run(() =>
