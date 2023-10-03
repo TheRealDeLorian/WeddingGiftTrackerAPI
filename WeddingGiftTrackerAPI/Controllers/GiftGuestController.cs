@@ -31,12 +31,12 @@ namespace WeddingGiftTrackerAPI.Controllers
                     GiftId = 2,
                     GuestId = 1
                 },
-                new BoardGame() {
+                new GiftGuest() {
                     Id = 3,
-
-                    Name = "Terraforming Mars",
-                    Year = 2016
+                    GiftId = 3,
+                    GuestId = 2
                 }
             };
         }
+    }
 }
