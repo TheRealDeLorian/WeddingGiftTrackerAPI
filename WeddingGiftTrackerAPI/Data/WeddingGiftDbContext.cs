@@ -45,13 +45,13 @@ public partial class WeddingGiftDbContext : DbContext
             entity.Property(e => e.Description)
                 .HasMaxLength(1000)
                 .HasColumnName("description");
-            entity.Property(e => e.Giftname)
+            entity.Property(e => e.GiftName)
                 .HasMaxLength(100)
                 .HasColumnName("giftname");
-            entity.Property(e => e.Gifttype).HasColumnName("gifttype");
+            entity.Property(e => e.GiftType).HasColumnName("gifttype");
 
-            entity.HasOne(d => d.GifttypeNavigation).WithMany(p => p.Gifts)
-                .HasForeignKey(d => d.Gifttype)
+            entity.HasOne(d => d.GiftTypeNavigation).WithMany(p => p.Gifts)
+                .HasForeignKey(d => d.GiftType)
                 .HasConstraintName("gift_gifttype_fkey");
         });
 
@@ -62,15 +62,15 @@ public partial class WeddingGiftDbContext : DbContext
             entity.ToTable("gift_guest", "weddinggifttracker");
 
             entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.Giftid).HasColumnName("giftid");
-            entity.Property(e => e.Guestid).HasColumnName("guestid");
+            entity.Property(e => e.GiftId).HasColumnName("giftid");
+            entity.Property(e => e.GuestId).HasColumnName("guestid");
 
             entity.HasOne(d => d.Gift).WithMany(p => p.GiftGuests)
-                .HasForeignKey(d => d.Giftid)
+                .HasForeignKey(d => d.GiftId)
                 .HasConstraintName("gift_guest_giftid_fkey");
 
             entity.HasOne(d => d.Guest).WithMany(p => p.GiftGuests)
-                .HasForeignKey(d => d.Guestid)
+                .HasForeignKey(d => d.GuestId)
                 .HasConstraintName("gift_guest_guestid_fkey");
         });
 
@@ -96,7 +96,7 @@ public partial class WeddingGiftDbContext : DbContext
             entity.Property(e => e.Address)
                 .HasMaxLength(3000)
                 .HasColumnName("address");
-            entity.Property(e => e.Guestname)
+            entity.Property(e => e.GuestName)
                 .HasMaxLength(1000)
                 .HasColumnName("guestname");
         });
