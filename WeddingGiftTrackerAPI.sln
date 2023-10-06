@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeddingGiftTrackerAPI", "WeddingGiftTrackerAPI\WeddingGiftTrackerAPI.csproj", "{ED48CC00-C148-47A2-BC65-2647B4EEF8CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingGiftTracker.IntegrationTests", "WeddingGiftTrackerTests\WeddingGiftTracker.IntegrationTests.csproj", "{884E5D43-9F3C-4EB0-8FA1-8AC6D0902E58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeddingGiftTracker.IntegrationTests", "WeddingGiftTrackerTests\WeddingGiftTracker.IntegrationTests.csproj", "{884E5D43-9F3C-4EB0-8FA1-8AC6D0902E58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

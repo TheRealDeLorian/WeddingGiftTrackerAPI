@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using WeddingGiftTrackerAPI.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<WeddingGiftDbContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DbConnectionString"));
+});
 
 var app = builder.Build();
 
@@ -31,3 +39,5 @@ app.MapGet("/error/test", () => { throw new Exception("test"); });
 app.MapControllers();
 
 app.Run();
+
+public partial class Program { }
