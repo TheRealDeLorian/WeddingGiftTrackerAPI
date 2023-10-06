@@ -4,11 +4,11 @@ using WeddingGiftTrackerAPI.Data.Models;
 
 namespace WeddingGiftTrackerTests;
 
-public class GiftTests : IClassFixture<WeddingGiftTrackerApiWebApplicationFactory>
+public class GiftIntegrationTests : IClassFixture<WeddingGiftTrackerApiWebApplicationFactory>
 {
     private readonly HttpClient httpClient;
 
-    public GiftTests(WeddingGiftTrackerApiWebApplicationFactory factory)
+    public GiftIntegrationTests(WeddingGiftTrackerApiWebApplicationFactory factory)
     {
         httpClient = factory.CreateDefaultClient();
     }
@@ -27,7 +27,14 @@ public class GiftTests : IClassFixture<WeddingGiftTrackerApiWebApplicationFactor
             Id = 1,
             GiftName = "record player"
         });
+    }
 
-        //response.IsSuccessStatusCode.Should().BeTrue();
+    [Fact]
+    public async Task AddingGiftWithLetterAsIdReturnsAnError()
+    {
+        var response = await httpClient.GetAsync("/v1/gift/a");
+        await response.Content.ReadAsStringAsync();
+        response.IsSuccessStatusCode.Should().BeFalse();
+
     }
 }

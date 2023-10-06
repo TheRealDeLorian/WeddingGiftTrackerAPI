@@ -1,0 +1,79 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@server = https://localhost:7085/api/v1
+
+### adding new joke
+POST {{server}}/Gift/a
+Content-Type: application/json
+
+{
+  "giftname": 
+}
+
+### Telling joke to audience
+POST {{server}}/DeliveredJoke
+Content-Type: application/json
+
+{
+  "delivereddate": "2023-09-25",
+  "jokereactionid": 3,
+  "jokeid": 5,
+  "audienceid": 1,
+  "notes": "Be careful not to tell this one in front of Great Aunt Ruth."
+}
+
+
+###
+GET {{server}}/gift/a
+
+
+
+###
+
+
+GET {{server}}/Joke/
+
+
+
+### audiences
+POST {{server}}/Audience
+Content-Type: application/json
+
+{
+  "audiencename": "string",
+  "description": "string"
+}
+
+###
+
+GET {{server}}/Audience
+
+###
+
+DELETE {{server}}/Audience/3
+
+###
+
+DELETE {{server}}/Joke/6
+
+
+
+###
+
+POST {{server}}/Audience
+Content-Type: application/json
+
+{
+  "id": "3",
+  "audiencename": "PsychologyClass", 
+  "description": "Class where we study the mind and human behavior"
+}
+
+###
+
+PUT {{server}}/Joke/5
+Content-Type: application/json
+
+{
+  "jokename": "The one about the fish",
+  "joketext": "What do you call a fish with no i's? A fsh!!!!!!!!!!!!"
+}
