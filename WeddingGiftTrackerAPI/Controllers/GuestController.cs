@@ -1,6 +1,6 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
-using WeddingGiftTrackerAPI.Data.DataStores;
+using WeddingGiftTrackerAPI.Services;
 
 namespace WeddingGiftTrackerAPI.Controllers
 {

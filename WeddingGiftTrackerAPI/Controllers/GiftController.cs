@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
-using WeddingGiftTrackerAPI.Data.DataStores;
+using WeddingGiftTrackerAPI.Services;
+using WeddingGiftTrackerAPI.Data.DTOs;
 
 namespace WeddingGiftTrackerAPI.Controllers
 {
@@ -18,13 +19,10 @@ namespace WeddingGiftTrackerAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<string> Get()
+        public async Task<IEnumerable<GiftDTO>> Get()
         {
             var gifts = await _giftService.GetAll();
-            return await Task.Run(() =>
-            {
-                return $"TODO: return all items";
-            }); 
+            return gifts.Select(g => MakeGiftDTO(g));
         }
 
         [HttpGet("{id}")]
@@ -43,6 +41,18 @@ namespace WeddingGiftTrackerAPI.Controllers
             {
                 return $"TODO: delete the item with id #{id}";
             });
+        }
+
+        private GiftDTO MakeGiftDTO(Gift g)
+        {
+            return new GiftDTO
+            {
+                GiftName = g.GiftName,
+                Description = g.Description,
+                GiftType = g.GiftTypes(g.GiftType).ToString(),
+                //TODO: Make gifttype controller to be able to get this
+
+            };
         }
     }
 }

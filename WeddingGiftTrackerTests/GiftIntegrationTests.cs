@@ -25,12 +25,11 @@ public class GiftIntegrationTests : IClassFixture<WeddingGiftTrackerApiWebApplic
         });
     }
 
-    [Fact]
+    [Fact(DisplayName = "get gift with char error")]
     public async Task AddingGiftWithLetterAsIdReturnsAnError()
     {
         var response = await httpClient.GetAsync("/v1/gift/a");
         await response.Content.ReadAsStringAsync();
         response.IsSuccessStatusCode.Should().BeFalse();
-
     }
 }

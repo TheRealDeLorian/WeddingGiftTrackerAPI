@@ -22,7 +22,7 @@ public partial class WeddingGiftDbContext : DbContext
 
     public virtual DbSet<GiftGuest> GiftGuests { get; set; }
 
-    public virtual DbSet<GiftType> Gifttypes { get; set; }
+    public virtual DbSet<GiftType> GiftTypes { get; set; }
 
     public virtual DbSet<Guest> Guests { get; set; }
 

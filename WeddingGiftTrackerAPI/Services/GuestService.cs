@@ -1,6 +1,6 @@
-﻿using WeddingGiftTrackerAPI.Data.DataStores;
+﻿using WeddingGiftTrackerAPI.Data;
 
-namespace WeddingGiftTrackerAPI.Data.Models;
+namespace WeddingGiftTrackerAPI.Services;
 
 public class GuestService : IWeddingGiftTrackerService<Guest>
 {
