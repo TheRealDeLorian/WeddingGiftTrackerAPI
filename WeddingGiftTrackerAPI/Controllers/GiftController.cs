@@ -9,18 +9,18 @@ namespace WeddingGiftTrackerAPI.Controllers
     public class GiftController : ControllerBase
     {
         private readonly ILogger<GiftGuestController> _logger;
-        private readonly IDataStore dataStore;
+        private readonly IWeddingGiftTrackerService<Gift> _giftService;
 
-        public GiftController(ILogger<GiftGuestController> logger, IDataStore dataStore)
+        public GiftController(ILogger<GiftGuestController> logger, IWeddingGiftTrackerService<Gift> giftService)
         {
             _logger = logger;
+            _giftService = giftService;
         }
 
-      
-
-            [HttpGet]
+        [HttpGet]
         public async Task<string> Get()
         {
+            var gifts = await _giftService.GetAll();
             return await Task.Run(() =>
             {
                 return $"TODO: return all items";

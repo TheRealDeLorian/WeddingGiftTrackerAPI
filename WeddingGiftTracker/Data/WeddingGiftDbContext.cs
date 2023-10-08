@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using WeddingGiftTrackerAPI.Data.DTOs;
 
 namespace WeddingGiftTrackerAPI.Data;
 

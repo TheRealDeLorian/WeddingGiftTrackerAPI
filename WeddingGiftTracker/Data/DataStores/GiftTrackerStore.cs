@@ -3,7 +3,6 @@ using WeddingGiftTrackerAPI.Data.DataStores;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Text;
-using WeddingGiftTrackerAPI.Data.Models;
 
 namespace Dadabase.Data;
 

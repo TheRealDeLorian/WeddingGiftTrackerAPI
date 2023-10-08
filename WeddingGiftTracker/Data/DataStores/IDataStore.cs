@@ -1,6 +1,4 @@
-﻿using WeddingGiftTrackerAPI.Data.Models;
-
-namespace WeddingGiftTrackerAPI.Data.DataStores
+﻿namespace WeddingGiftTrackerAPI.Data.DataStores
 {
     public interface IDataStore //dedicated interface or base class. can be provided by framework, developer, or third party
     {

@@ -1,6 +1,7 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
 
-namespace WeddingGiftTrackerAPI.Data.Models;
+namespace WeddingGiftTrackerAPI.Data;
 
 public partial class GiftGuest
 {

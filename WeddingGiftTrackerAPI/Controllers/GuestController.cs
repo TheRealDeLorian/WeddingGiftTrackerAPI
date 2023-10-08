@@ -8,10 +8,10 @@ namespace WeddingGiftTrackerAPI.Controllers
     [Route("[controller]")]
     public class GuestController : ControllerBase
     {
-        private readonly ILogger<GiftGuestController> _logger;
-        private readonly IDataStore dataStore;
+        private readonly ILogger<GuestController> _logger;
+        private readonly IWeddingGiftTrackerService<Guest> dataStore;
 
-        public GuestController(ILogger<GiftGuestController> logger, IDataStore dataStore)
+        public GuestController(ILogger<GuestController> logger, IWeddingGiftTrackerService<Guest> dataStore)
         {
         }
     }

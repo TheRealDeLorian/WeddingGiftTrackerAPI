@@ -1,6 +1,5 @@
 using FluentAssertions;
 using System.Net.Http.Json;
-using WeddingGiftTrackerAPI.Data.Models;
 
 namespace WeddingGiftTrackerTests;
 
@@ -14,18 +13,15 @@ public class GiftIntegrationTests : IClassFixture<WeddingGiftTrackerApiWebApplic
     }
 
 
-    [Fact]
+    [Fact(DisplayName = "Get gift")]
     public async Task CanCallApi()
     {
-        var response = await httpClient.GetAsync("/v1/gift/1");
-        await response.Content.ReadAsStringAsync();
-        Assert.True(response.IsSuccessStatusCode);
-
-        var gift1 = await httpClient.GetFromJsonAsync<Gift>("/v1/gift/1");
-        gift1.Should().BeEquivalentTo(new Gift
+        var gift = await httpClient.GetFromJsonAsync<GiftDTO>("/v1/gift/1");
+        gift.Should().BeEquivalentTo(new GiftDTO
         {
-            Id = 1,
-            GiftName = "record player"
+            GiftName = "Record player",
+            Description = "A record player that plays records",
+            GiftType = "Misc."
         });
     }
 
