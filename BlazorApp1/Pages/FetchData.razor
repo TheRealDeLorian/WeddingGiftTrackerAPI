@@ -1,6 +1,7 @@
 ﻿@page "/fetchdata"
 @using BlazorAppGiftTracker.Data
 @inject WeatherForecastService ForecastService
+@inject HttpClient Http
 
 <PageTitle>Weather forecast</PageTitle>
 
@@ -38,10 +39,11 @@ else
 }
 
 @code {
-    private WeatherForecast[]? forecasts;
+    private IEnumerable<WeatherForecast> forecasts;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await ForecastService.GetForecastAsync(DateOnly.FromDateTime(DateTime.Now));
+        forecasts = await Http.GetFromJsonAsync<IEnumerable<WeatherForecast>>("https://localhost:5001/api/forecast");
+        //  forecasts = await ForecastService.GetForecastAsync(DateOnly.FromDateTime(DateTime.Now));
     }
 }

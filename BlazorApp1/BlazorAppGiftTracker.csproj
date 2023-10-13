@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WeddingGiftTrackerAPI\WeddingGiftTrackerAPI.csproj" />
     <ProjectReference Include="..\WeddingGiftTrackerClassLibrary\WeddingGiftTrackerClassLibrary.csproj" />
   </ItemGroup>
 
