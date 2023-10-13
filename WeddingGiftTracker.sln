@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeddingGiftTrackerAPI", "We
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeddingGiftTracker.IntegrationTests", "WeddingGiftTrackerTests\WeddingGiftTracker.IntegrationTests.csproj", "{884E5D43-9F3C-4EB0-8FA1-8AC6D0902E58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1", "BlazorApp1\BlazorApp1.csproj", "{7CBA64EF-D853-4442-A303-C8E7EF8E79CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAppGiftTracker", "BlazorApp1\BlazorAppGiftTracker.csproj", "{7CBA64EF-D853-4442-A303-C8E7EF8E79CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingGiftTrackerClassLibrary", "WeddingGiftTrackerClassLibrary\WeddingGiftTrackerClassLibrary.csproj", "{505ADF94-596B-4A4C-9C5B-BDBA4D957D85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeddingGiftTrackerClassLibrary", "WeddingGiftTrackerClassLibrary\WeddingGiftTrackerClassLibrary.csproj", "{505ADF94-596B-4A4C-9C5B-BDBA4D957D85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
