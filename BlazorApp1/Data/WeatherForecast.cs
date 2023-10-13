@@ -1,4 +1,4 @@
-namespace BlazorApp1.Data
+namespace BlazorAppGiftTracker.Data
 {
     public class WeatherForecast
     {
