@@ -49,7 +49,7 @@ namespace WeddingGiftTrackerAPI.Controllers
             {
                 GiftName = g.GiftName,
                 Description = g.Description,
-                GiftType = g.GiftTypes(g.GiftType).ToString(),
+                GiftType = g.GiftType.ToString(),
                 //TODO: Make gifttype controller to be able to get this
 
             };
