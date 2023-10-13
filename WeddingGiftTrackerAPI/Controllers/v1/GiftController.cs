@@ -23,7 +23,7 @@ namespace WeddingGiftTrackerAPI.Controllers.v1
         public async Task<IEnumerable<GiftDTO>> Get()
         {
             var gifts = await _giftService.GetAll();
-            return gifts.Select(g => MakeGiftDTO(g));
+            return gifts.Select(MakeGiftDTO);
         }
 
         [HttpGet("{id}")]

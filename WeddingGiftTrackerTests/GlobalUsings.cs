@@ -1,2 +1,2 @@
 global using Xunit;
-global using WeddingGiftTrackerAPI.Data.DTOs;
+global using WeddingGiftTrackerClassLibrary.Data;

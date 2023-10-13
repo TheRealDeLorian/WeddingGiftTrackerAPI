@@ -1,6 +1,6 @@
 using FluentAssertions;
 using System.Net.Http.Json;
-using WeddingGiftTrackerAPI.Data.Models;
+using WeddingGiftTrackerClassLibrary.Data;
 
 namespace WeddingGiftTrackerTests;
 
