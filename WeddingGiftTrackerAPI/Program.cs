@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using WeddingGiftTrackerAPI.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
