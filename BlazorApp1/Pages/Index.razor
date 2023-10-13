@@ -10,12 +10,38 @@ Welcome to your new app.
 
 <Counter IncrementBy="20"/>
 
+<button @onclick="(() => ShowDialog())">Click me!</button>
 
+<form>
+
+</form>
+
+<div class="dialog-button">
+
+<button onclick="OnCancel">Cancel</button>
+    
+</div>
+
+@if(showingDialog)
+{
+    <ConfigureDialog
+        oncancel="CancelDialog()"/>
+        
+}
 
 
 @code 
 {
+    bool showingDialog;
 
+    void ShowDialog()
+    {
 
+        showingDialog = true;
+    }
 
+    void CancelDialog()
+    {
+        showingDialog = false;
+    }
 }
