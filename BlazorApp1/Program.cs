@@ -1,4 +1,3 @@
-using BlazorAppGiftTracker.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using WeddingGiftTrackerClassLibrary.Data;
@@ -9,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<GiftService>();
+//builder.Services.AddSingleton<GiftService>();
 builder.Services.AddHttpClient();
 
 var app = builder.Build();
