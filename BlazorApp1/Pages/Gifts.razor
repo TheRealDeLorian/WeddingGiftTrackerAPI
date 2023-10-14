@@ -1,4 +1,4 @@
-﻿@using WeddingGiftTrackerClassLibrary
+﻿@* @using WeddingGiftTrackerClassLibrary
 @using WeddingGiftTrackerAPI
 @inject HttpClient Http
 @inject GiftService gs
@@ -12,4 +12,4 @@
         forecasts = await Http.GetFromJsonAsync<IEnumerable<WeatherForecast>>("https://localhost:5001/api/forecast");
         //  forecasts = await ForecastService.GetForecastAsync(DateOnly.FromDateTime(DateTime.Now));
     }
-}
+} *@
