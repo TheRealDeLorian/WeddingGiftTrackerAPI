@@ -10,11 +10,9 @@ public partial class WeddingGiftDbContext : DbContext
     {
     }
 
-    public WeddingGiftDbContext(DbContextOptions<WeddingGiftDbContext> options)
-        : base(options)
+    public WeddingGiftDbContext(DbContextOptions<WeddingGiftDbContext> options) : base(options)
     {
     }
-
   
 
     public virtual DbSet<Gift> Gifts { get; set; }
