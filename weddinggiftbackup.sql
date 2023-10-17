@@ -5,6 +5,7 @@
 -- Dumped from database version 12.14
 -- Dumped by pg_dump version 15.4 (Debian 15.4-1.pgdg120+1)
 
+create role doriancottle_25;
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;

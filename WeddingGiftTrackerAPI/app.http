@@ -13,7 +13,7 @@ Content-Type: application/json
 
 
 ###
-GET {{server}}/gift
+GET {{server}}/gift/a
 
 
 
