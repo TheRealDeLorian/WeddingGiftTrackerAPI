@@ -9,10 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddDbContext<WeddingGiftDbContext>(
+builder.Services.AddDbContextFactory<WeddingGiftDbContext>(
     opt => opt.UseSqlServer(
        builder.Configuration.GetConnectionString("WeddingGiftTrackerDb")));
-//builder.Services.AddSingleton<GiftService>();
+
 builder.Services.AddHttpClient();
 
 var app = builder.Build();

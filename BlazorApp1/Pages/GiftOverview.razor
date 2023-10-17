@@ -1,7 +1,47 @@
 ﻿@page "/gifts/list"
+@inject IDbContextFactory<WeddingGiftDbContext> ContextFactory
 
 <PageTitle>Gifts</PageTitle>
 
 <h1>Gifts</h1>
 
-TODO: show all gifts here
+@if (Gifts is null)
+{
+    <div>Loading...................</div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Guest</th>
+                <th>Gift</th>
+                <th>Thanked?</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var gift in Gifts)
+            {
+                <tr>
+                    <td>@gift.GiftGuests</td>
+                    <td>@gift.GiftName</td>
+                    <td>@gift.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Gift[]? Gifts { get; set; }
+    private Guest[]? Guests { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = ContextFactory.CreateDbContext();
+
+        Gifts = await context.Gifts
+        .Include(gg => gg.GiftGuests)
+        .ToArrayAsync();
+    }
+}

@@ -19,14 +19,14 @@ public class GiftService : IWeddingGiftTrackerService<Gift>
     public async Task<IEnumerable<Gift>> GetAll()
     {
         return await _context.Gifts
-                .Include(g => g.GiftType)
+                .Include(g => g.GiftGuests)
                 .ToListAsync();
     }
     public async Task<Gift> Get(int id)
     {
         _logger.LogInformation("Getting gift {id}", id);
         return await _context.Gifts
-            .Include(g => g.GiftType)
+            .Include(g => g.GiftGuests)
             .FirstOrDefaultAsync(g => g.Id == id);
     }
 

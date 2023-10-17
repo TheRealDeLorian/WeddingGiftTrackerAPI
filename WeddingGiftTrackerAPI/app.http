@@ -1,5 +1,5 @@
 # For more info on HTTP files go to https://aka.ms/vs/httpfile
-@server = https://localhost:7085/api/v1
+@server = https://localhost:7085
 
 ### adding new joke
 POST {{server}}/Gift/a
@@ -9,21 +9,11 @@ Content-Type: application/json
   "giftname": 
 }
 
-### Telling joke to audience
-POST {{server}}/DeliveredJoke
-Content-Type: application/json
 
-{
-  "delivereddate": "2023-09-25",
-  "jokereactionid": 3,
-  "jokeid": 5,
-  "audienceid": 1,
-  "notes": "Be careful not to tell this one in front of Great Aunt Ruth."
-}
 
 
 ###
-GET {{server}}/gift/a
+GET {{server}}/gift
 
 
 
