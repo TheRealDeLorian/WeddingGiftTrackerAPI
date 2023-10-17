@@ -27,11 +27,12 @@ namespace WeddingGiftTrackerAPI.Controllers.v1
         }
 
         [HttpGet("{id}")]
-        public async Task<string> Get(int id)
+        public async Task<GiftDTO> Get(int id)
         {
-            return await Task.Run(() =>
+            return await Task.Run(async () =>
             {
-                return $"TODO: return the item with id  #{id}";
+                var gift = await _giftService.Get(id);
+                return MakeGiftDTO(gift);
             });
         }
 
